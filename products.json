@@ -1,0 +1,100 @@
+[
+  {
+    "id": 11,
+    "name": "Baggy Jeans - Dark Blue",
+    "price": "95.00",
+    "images": ["https://res.cloudinary.com/dysfwxbhk/image/upload/v1753304893/Dark_blue_baggy_jeans_men_pfi0cm.jpg"],
+    "category": "Man",
+    "subcategory": "Baggy Jeans",
+    "description": "Comfortable and trendy dark blue baggy jeans perfect for casual wear.",
+    "stock": 12,
+    "isTrending": true
+  },
+  {
+    "id": 12,
+    "name": "Baggy Jeans - Sky Blue",
+    "price": "95.00",
+    "images": ["https://res.cloudinary.com/dysfwxbhk/image/upload/v1753304924/Sky_blue_baggy_jeans_men_sdmlej.webp"],
+    "category": "Man",
+    "subcategory": "Baggy Jeans",
+    "description": "Stylish sky blue baggy jeans with a relaxed fit.",
+    "stock": 10,
+    "isTrending": true
+  },
+  {
+    "id": 13,
+    "name": "Baggy Jeans - Black",
+    "price": "3000.00",
+    "images": ["https://res.cloudinary.com/dysfwxbhk/image/upload/v1753304958/Black_baggy_jeans_men_zyyklt.jpg"],
+    "category": "Man",
+    "subcategory": "Baggy Jeans",
+    "description": "Classic black baggy jeans made from premium denim.",
+    "stock": 9,
+    "isTrending": true
+  },
+  {
+    "id": 14,
+    "name": "Baggy T-Shirt - Black",
+    "price": "40.00",
+    "images": ["https://res.cloudinary.com/dysfwxbhk/image/upload/v1753304853/Black_baggy_T_shirt_men_v0dlxy.jpg"],
+    "category": "Man",
+    "subcategory": "Baggy T-Shirts",
+    "description": "Comfortable black baggy t-shirt ideal for streetwear style.",
+    "stock": 14
+  },
+  {
+    "id": 15,
+    "name": "Baggy T-Shirt - White",
+    "price": "40.00",
+    "images": ["https://res.cloudinary.com/dysfwxbhk/image/upload/v1753304818/White_baggy_T_shirt_men_z6fxuo.jpg"],
+    "category": "Man",
+    "subcategory": "Baggy T-Shirts",
+    "description": "Loose-fit white t-shirt for an effortlessly cool look.",
+    "stock": 16,
+    "isTrending": true
+  },
+  {
+    "id": 16,
+    "name": "Baggy Jeans - Sky Blue",
+    "price": "90.00",
+    "images": ["https://res.cloudinary.com/dysfwxbhk/image/upload/v1753304599/Sky_blue_baggy_jeans_women_ekgwgk.jpg"],
+    "category": "Woman",
+    "subcategory": "Baggy Jeans",
+    "description": "Trendy sky blue baggy jeans that pair with any top.",
+    "stock": 11,
+    "isTrending": true
+  },
+  {
+    "id": 17,
+    "name": "Baggy Jeans - Black",
+    "price": "90.00",
+    "images": ["https://res.cloudinary.com/dysfwxbhk/image/upload/v1753304764/Woman_black_baggy_jeans_kbwovm.webp"],
+    "category": "Woman",
+    "subcategory": "Baggy Jeans",
+    "description": "Sleek black baggy jeans for a bold streetwear look.",
+    "stock": 13,
+    "isTrending": true
+  },
+  {
+    "id": 18,
+    "name": "Baggy T-Shirt - Black",
+    "price": "42.00",
+    "images": ["https://res.cloudinary.com/dysfwxbhk/image/upload/v1753304406/Black_baggy_shirts_women_zbltvu.jpg"],
+    "category": "Woman",
+    "subcategory": "Baggy T-Shirts",
+    "description": "Oversized black t-shirt, comfy and stylish for all-day wear.",
+    "stock": 18,
+    "isTrending": true
+  },
+  {
+    "id": 19,
+    "name": "Baggy T-Shirt - White",
+    "price": "42.00",
+    "images": ["https://res.cloudinary.com/dysfwxbhk/image/upload/v1753304556/White_baggy_T_shirt_women_fluv0z.jpg"],
+    "category": "Woman",
+    "subcategory": "Baggy T-Shirts",
+    "description": "Classic white oversized t-shirt made from soft cotton fabric.",
+    "stock": 17,
+    "isTrending": true
+  }
+]
