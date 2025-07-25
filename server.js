@@ -13,7 +13,14 @@ connectDB();
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: [
+    "https://royce-client.vercel.app", // replace with your Vercel/GitHub domain
+    "http://localhost:3000"             // for local dev
+  ],
+  credentials: true
+}));
+
 app.use(express.json());
 
 // Serve uploaded files (if local)
