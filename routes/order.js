@@ -34,7 +34,7 @@ router.post('/', async (req, res) => {
     if (!isValidEmail(email)) {
       return res.status(400).json({ error: 'Please enter a valid email address.' });
     }
-    // ✅ Validate required fields
+    // Validate required fields
     if (
       !customerName ||
       !email ||

@@ -1,109 +1,201 @@
 [
   {
-    "id": 11,
-    "name": "Baggy Jeans - Dark Blue",
-    "price": "95.00",
-    "images": ["https://res.cloudinary.com/dysfwxbhk/image/upload/v1753304893/Dark_blue_baggy_jeans_men_pfi0cm.jpg"],
-    "category": "Man",
-    "subcategory": "Baggy Jeans",
-    "description": "Comfortable and trendy dark blue baggy jeans perfect for casual wear.",
-    "stock": 12,
-    "isTrending": true,
-    "sizes": ["28", "30", "32", "34", "36"]
-  },
-  {
-    "id": 12,
-    "name": "Baggy Jeans - Sky Blue",
-    "price": "95.00",
-    "images": ["https://res.cloudinary.com/dysfwxbhk/image/upload/v1753304924/Sky_blue_baggy_jeans_men_sdmlej.webp"],
-    "category": "Man",
-    "subcategory": "Baggy Jeans",
-    "description": "Stylish sky blue baggy jeans with a relaxed fit.",
-    "stock": 10,
-    "isTrending": true,
-    "sizes": ["28", "30", "32", "34", "36"]
-  },
-  {
-    "id": 13,
-    "name": "Baggy Jeans - Black",
-    "price": "3000.00",
-    "images": ["https://res.cloudinary.com/dysfwxbhk/image/upload/v1753304958/Black_baggy_jeans_men_zyyklt.jpg"],
-    "category": "Man",
-    "subcategory": "Baggy Jeans",
-    "description": "Classic black baggy jeans made from premium denim.",
-    "stock": 9,
-    "isTrending": true,
-    "sizes": ["28", "30", "32", "34", "36"]
-  },
-  {
-    "id": 14,
-    "name": "Baggy T-Shirt - Black",
-    "price": "40.00",
-    "images": ["https://res.cloudinary.com/dysfwxbhk/image/upload/v1753304853/Black_baggy_T_shirt_men_v0dlxy.jpg"],
+    "id": 25,
+    "name": "Baggy T-Shirt - Botanical Patch Mustard",
+    "price": "1500.00",
+    "images": [
+      "https://res.cloudinary.com/dysfwxbhk/image/upload/v1753412966/WhatsApp_Image_2025-07-24_at_7.54.03_PM_gcfunj.jpg",
+      "https://res.cloudinary.com/dysfwxbhk/image/upload/v1753412947/WhatsApp_Image_2025-07-24_at_7.54.03_PM_1_bxftyz.jpg",
+      "https://res.cloudinary.com/dysfwxbhk/image/upload/v1753412963/WhatsApp_Image_2025-07-24_at_7.54.02_PM_wxsg4q.jpg"
+    ],
     "category": "Man",
     "subcategory": "Baggy T-Shirts",
-    "description": "Comfortable black baggy t-shirt ideal for streetwear style.",
-    "stock": 14,
-    "sizes": ["S", "M", "L", "XL"]
-  },
-  {
-    "id": 15,
-    "name": "Baggy T-Shirt - White",
-    "price": "40.00",
-    "images": ["https://res.cloudinary.com/dysfwxbhk/image/upload/v1753304818/White_baggy_T_shirt_men_z6fxuo.jpg"],
-    "category": "Man",
-    "subcategory": "Baggy T-Shirts",
-    "description": "Loose-fit white t-shirt for an effortlessly cool look.",
-    "stock": 16,
+    "description": "Mustard colored baggy t-shirt with unique botanical patch design.",
+    "stock": 6,
     "isTrending": true,
-    "sizes": ["S", "M", "L", "XL"]
+    "sizes": [
+      "M",
+      "L",
+      "XL"
+    ]
   },
   {
-    "id": 16,
-    "name": "Baggy Jeans - Sky Blue",
-    "price": "90.00",
-    "images": ["https://res.cloudinary.com/dysfwxbhk/image/upload/v1753304599/Sky_blue_baggy_jeans_women_ekgwgk.jpg"],
+    "id": 28,
+    "name": "Baggy T-Shirt - Coming Soon (Women)",
+    "price": "0.00",
+    "images": [
+      "https://res.cloudinary.com/dysfwxbhk/image/upload/v1753413699/coming-soon-black-white-design-template_859243-262_diwbua.avif"
+    ],
+    "category": "Woman",
+    "subcategory": "Baggy T-Shirts",
+    "description": "New collection of women's baggy t-shirts launching soon. Stay tuned!",
+    "stock": 0,
+    "isTrending": false,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ]
+  },
+  {
+    "id": 29,
+    "name": "Baggy Jeans - Coming Soon (Women)",
+    "price": "0.00",
+    "images": [
+      "https://res.cloudinary.com/dysfwxbhk/image/upload/v1753413699/coming-soon-black-white-design-template_859243-262_diwbua.avif"
+    ],
     "category": "Woman",
     "subcategory": "Baggy Jeans",
-    "description": "Trendy sky blue baggy jeans that pair with any top.",
+    "description": "Our women's baggy jeans are arriving soon. Comfort meets style!",
+    "stock": 0,
+    "isTrending": false,
+    "sizes": [
+      "26",
+      "28",
+      "30",
+      "32",
+      "34"
+    ]
+  },
+  {
+    "id": 27,
+    "name": "Baggy T-Shirt - Etnica Para Homen",
+    "price": "1500.00",
+    "images": [
+      "https://res.cloudinary.com/dysfwxbhk/image/upload/v1753413120/WhatsApp_Image_2025-07-24_at_7.54.03_PM_4_wlhkbn.jpg",
+      "https://res.cloudinary.com/dysfwxbhk/image/upload/v1753413147/WhatsApp_Image_2025-07-24_at_7.54.03_PM_5_hzluzi.jpg",
+      "https://res.cloudinary.com/dysfwxbhk/image/upload/v1753413083/WhatsApp_Image_2025-07-24_at_7.54.03_PM_2_hydt4c.jpg"
+    ],
+    "category": "Man",
+    "subcategory": "Baggy T-Shirts",
+    "description": "Culturally inspired 'Etnica Para Homen' baggy t-shirt for bold expression.",
     "stock": 11,
     "isTrending": true,
-    "sizes": ["26", "28", "30", "32", "34"]
+    "sizes": [
+      "S",
+      "L",
+      "XL",
+      "2XL"
+    ]
   },
   {
-    "id": 17,
-    "name": "Baggy Jeans - Black",
-    "price": "90.00",
-    "images": ["https://res.cloudinary.com/dysfwxbhk/image/upload/v1753304764/Woman_black_baggy_jeans_kbwovm.webp"],
-    "category": "Woman",
-    "subcategory": "Baggy Jeans",
-    "description": "Sleek black baggy jeans for a bold streetwear look.",
-    "stock": 13,
-    "isTrending": true,
-    "sizes": ["26", "28", "30", "32", "34"]
-  },
-  {
-    "id": 18,
-    "name": "Baggy T-Shirt - Black",
-    "price": "42.00",
-    "images": ["https://res.cloudinary.com/dysfwxbhk/image/upload/v1753304406/Black_baggy_shirts_women_zbltvu.jpg"],
-    "category": "Woman",
+    "id": 26,
+    "name": "Baggy T-Shirt - Pacific Flower White",
+    "price": "1500.00",
+    "images": [
+      "https://res.cloudinary.com/dysfwxbhk/image/upload/v1753413238/WhatsApp_Image_2025-07-24_at_7.54.03_PM_7_cgfgyi.jpg",
+      "https://res.cloudinary.com/dysfwxbhk/image/upload/v1753413239/WhatsApp_Image_2025-07-24_at_7.54.03_PM_6_ryq6xz.jpg"
+    ],
+    "category": "Man",
     "subcategory": "Baggy T-Shirts",
-    "description": "Oversized black t-shirt, comfy and stylish for all-day wear.",
-    "stock": 18,
+    "description": "White baggy t-shirt with pacific flower print for a cool and calm vibe.",
+    "stock": 3,
     "isTrending": true,
-    "sizes": ["XS", "S", "M", "L"]
+    "sizes": [
+      "S",
+      "M",
+      "XL"
+    ]
+  },
+  {
+    "id": 24,
+    "name": "Baggy T-Shirt - Ethnic Tree White",
+    "price": "1500.00",
+    "images": [
+      "https://res.cloudinary.com/dysfwxbhk/image/upload/v1753413317/WhatsApp_Image_2025-07-24_at_7.54.04_PM_1_i06vuy.jpg",
+      "https://res.cloudinary.com/dysfwxbhk/image/upload/v1753413319/WhatsApp_Image_2025-07-24_at_7.54.04_PM_m6uolp.jpg"
+    ],
+    "category": "Man",
+    "subcategory": "Baggy T-Shirts",
+    "description": "White baggy t-shirt with ethnic tree design for a clean, minimalist look.",
+    "stock": 9,
+    "isTrending": true,
+    "sizes": [
+      "S",
+      "M",
+      "L"
+    ]
+  },
+  {
+    "id": 23,
+    "name": "Baggy T-Shirt - Ethnic Tree Navy",
+    "price": "1500.00",
+    "images": [
+      "https://res.cloudinary.com/dysfwxbhk/image/upload/v1753413398/WhatsApp_Image_2025-07-24_at_7.54.04_PM_2_zo04d5.jpg",
+      "https://res.cloudinary.com/dysfwxbhk/image/upload/v1753413396/WhatsApp_Image_2025-07-24_at_7.54.04_PM_3_pvdhzh.jpg"
+    ],
+    "category": "Man",
+    "subcategory": "Baggy T-Shirts",
+    "description": "Ethnic tree printed baggy t-shirt in navy color, perfect for a cultural vibe.",
+    "stock": 8,
+    "isTrending": true,
+    "sizes": [
+      "M",
+      "L",
+      "XL"
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Baggy Jeans - Beige Denim",
+    "price": "2199.00",
+    "images": [
+      "https://res.cloudinary.com/dysfwxbhk/image/upload/v1753413445/WhatsApp_Image_2025-07-24_at_7.54.04_PM_4_z0i33r.jpg",
+      "https://res.cloudinary.com/dysfwxbhk/image/upload/v1753413440/WhatsApp_Image_2025-07-24_at_7.54.04_PM_5_xrvur0.jpg"
+    ],
+    "category": "Man",
+    "subcategory": "Baggy Jeans",
+    "description": "Trendy beige denim baggy jeans perfect for a relaxed streetwear look.",
+    "stock": 7,
+    "isTrending": true,
+    "sizes": [
+      "30",
+      "32",
+      "34",
+      "36"
+    ]
   },
   {
     "id": 19,
-    "name": "Baggy T-Shirt - White",
-    "price": "42.00",
-    "images": ["https://res.cloudinary.com/dysfwxbhk/image/upload/v1753304556/White_baggy_T_shirt_women_fluv0z.jpg"],
-    "category": "Woman",
-    "subcategory": "Baggy T-Shirts",
-    "description": "Classic white oversized t-shirt made from soft cotton fabric.",
-    "stock": 17,
+    "name": "Baggy Jeans - Blue Denim",
+    "price": "2199.00",
+    "images": [
+      "https://res.cloudinary.com/dysfwxbhk/image/upload/v1753413492/WhatsApp_Image_2025-07-24_at_7.54.04_PM_6_im5t9c.jpg"
+    ],
+    "category": "Man",
+    "subcategory": "Baggy Jeans",
+    "description": "Stylish and comfortable blue denim baggy jeans for an everyday casual look.",
+    "stock": 8,
     "isTrending": true,
-    "sizes": ["XS", "S", "M", "L"]
+    "sizes": [
+      "30",
+      "32",
+      "34",
+      "36"
+    ]
+  },
+  {
+    "id": 21,
+    "name": "Baggy Jeans - Black Denim",
+    "price": "2499.00",
+    "images": [
+      "https://res.cloudinary.com/dysfwxbhk/image/upload/v1753413531/WhatsApp_Image_2025-07-24_at_7.54.04_PM_9_wwydhh.jpg",
+      "https://res.cloudinary.com/dysfwxbhk/image/upload/v1753413532/WhatsApp_Image_2025-07-24_at_7.54.04_PM_8_zx6haw.jpg",
+      "https://res.cloudinary.com/dysfwxbhk/image/upload/v1753413536/WhatsApp_Image_2025-07-24_at_7.54.04_PM_7_k2eesl.jpg"
+    ],
+    "category": "Man",
+    "subcategory": "Baggy Jeans",
+    "description": "Classic black denim baggy jeans, designed for comfort and urban style.",
+    "stock": 8,
+    "isTrending": true,
+    "sizes": [
+      "30",
+      "32",
+      "34",
+      "36"
+    ]
   }
 ]
