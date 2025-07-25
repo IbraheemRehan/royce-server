@@ -66,10 +66,11 @@ router.post('/', async (req, res) => {
     const itemsHtml = items.map(item => {
       const link = `${BASE_URL}/ProductDetails.html?productId=${item.productId}`;
       return `<li>
-        ${item.name} (x${item.quantity}) - Rs.${item.price} <br>
-        <a href="${link}" target="_blank">🔗 View Product</a>
-      </li>`;
+    ${item.name} (Size: ${item.size}) x${item.quantity} - Rs.${item.price} <br>
+    <a href="${link}" target="_blank">🔗 View Product</a>
+  </li>`;
     }).join('');
+
 
     // Email to Admin
     const adminMailOptions = {

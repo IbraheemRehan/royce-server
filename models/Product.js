@@ -10,7 +10,9 @@ const productSchema = new mongoose.Schema({
   subcategory: String,
   description: String,
   stock: Number,
-  isTrending: Boolean
+  isTrending: Boolean,
+  sizes: [String] //  new field for available sizes
 });
+
 
 module.exports = mongoose.model('Product', productSchema);

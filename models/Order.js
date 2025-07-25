@@ -10,6 +10,10 @@ const itemSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  size: {
+    type: String, // add this line
+    required: true,
+  },
   quantity: {
     type: Number,
     required: true,

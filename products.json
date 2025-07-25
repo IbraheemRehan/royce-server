@@ -8,7 +8,8 @@
     "subcategory": "Baggy Jeans",
     "description": "Comfortable and trendy dark blue baggy jeans perfect for casual wear.",
     "stock": 12,
-    "isTrending": true
+    "isTrending": true,
+    "sizes": ["28", "30", "32", "34", "36"]
   },
   {
     "id": 12,
@@ -19,7 +20,8 @@
     "subcategory": "Baggy Jeans",
     "description": "Stylish sky blue baggy jeans with a relaxed fit.",
     "stock": 10,
-    "isTrending": true
+    "isTrending": true,
+    "sizes": ["28", "30", "32", "34", "36"]
   },
   {
     "id": 13,
@@ -30,7 +32,8 @@
     "subcategory": "Baggy Jeans",
     "description": "Classic black baggy jeans made from premium denim.",
     "stock": 9,
-    "isTrending": true
+    "isTrending": true,
+    "sizes": ["28", "30", "32", "34", "36"]
   },
   {
     "id": 14,
@@ -40,7 +43,8 @@
     "category": "Man",
     "subcategory": "Baggy T-Shirts",
     "description": "Comfortable black baggy t-shirt ideal for streetwear style.",
-    "stock": 14
+    "stock": 14,
+    "sizes": ["S", "M", "L", "XL"]
   },
   {
     "id": 15,
@@ -51,7 +55,8 @@
     "subcategory": "Baggy T-Shirts",
     "description": "Loose-fit white t-shirt for an effortlessly cool look.",
     "stock": 16,
-    "isTrending": true
+    "isTrending": true,
+    "sizes": ["S", "M", "L", "XL"]
   },
   {
     "id": 16,
@@ -62,7 +67,8 @@
     "subcategory": "Baggy Jeans",
     "description": "Trendy sky blue baggy jeans that pair with any top.",
     "stock": 11,
-    "isTrending": true
+    "isTrending": true,
+    "sizes": ["26", "28", "30", "32", "34"]
   },
   {
     "id": 17,
@@ -73,7 +79,8 @@
     "subcategory": "Baggy Jeans",
     "description": "Sleek black baggy jeans for a bold streetwear look.",
     "stock": 13,
-    "isTrending": true
+    "isTrending": true,
+    "sizes": ["26", "28", "30", "32", "34"]
   },
   {
     "id": 18,
@@ -84,7 +91,8 @@
     "subcategory": "Baggy T-Shirts",
     "description": "Oversized black t-shirt, comfy and stylish for all-day wear.",
     "stock": 18,
-    "isTrending": true
+    "isTrending": true,
+    "sizes": ["XS", "S", "M", "L"]
   },
   {
     "id": 19,
@@ -95,6 +103,7 @@
     "subcategory": "Baggy T-Shirts",
     "description": "Classic white oversized t-shirt made from soft cotton fabric.",
     "stock": 17,
-    "isTrending": true
+    "isTrending": true,
+    "sizes": ["XS", "S", "M", "L"]
   }
 ]
