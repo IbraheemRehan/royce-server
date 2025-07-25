@@ -3,7 +3,7 @@ const router = express.Router();
 const Order = require('../models/Order');
 const nodemailer = require('nodemailer');
 
-const BASE_URL = process.env.BASE_URL || 'http://127.0.0.1:3000/Client';
+const BASE_URL = process.env.BASE_URL || 'https://royce-client.vercel.app';
 
 const transporter = nodemailer.createTransport({
   service: 'gmail',
