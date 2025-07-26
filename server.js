@@ -16,7 +16,8 @@ const app = express();
 app.use(cors({
   origin: [
     "https://royce-client.vercel.app", // replace with your Vercel/GitHub domain
-    "http://localhost:3000"             // for local dev
+    "http://localhost:3000",
+    "https://www.roycethreads.com"             // for local dev
   ],
   credentials: true
 }));
