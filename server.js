@@ -28,7 +28,8 @@ app.use(cors({
       callback(new Error(`Blocked by CORS: ${origin}`));
     }
   },
-  credentials: true
+  credentials: true,
+  optionsSuccessStatus: 200 //  fixes Safari and older browsers
 }));
 
 
