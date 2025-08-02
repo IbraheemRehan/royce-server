@@ -2,11 +2,11 @@
   {
     "id": 25,
     "name": "Baggy T-Shirt - Botanical Patch Mustard",
-    "price": "1500.00",
+    "price": "1499.00",
     "images": [
+      "https://res.cloudinary.com/dysfwxbhk/image/upload/v1753412963/WhatsApp_Image_2025-07-24_at_7.54.02_PM_wxsg4q.jpg",
       "https://res.cloudinary.com/dysfwxbhk/image/upload/v1753412966/WhatsApp_Image_2025-07-24_at_7.54.03_PM_gcfunj.jpg",
-      "https://res.cloudinary.com/dysfwxbhk/image/upload/v1753412947/WhatsApp_Image_2025-07-24_at_7.54.03_PM_1_bxftyz.jpg",
-      "https://res.cloudinary.com/dysfwxbhk/image/upload/v1753412963/WhatsApp_Image_2025-07-24_at_7.54.02_PM_wxsg4q.jpg"
+      "https://res.cloudinary.com/dysfwxbhk/image/upload/v1753412947/WhatsApp_Image_2025-07-24_at_7.54.03_PM_1_bxftyz.jpg"
     ],
     "category": "Man",
     "subcategory": "Baggy T-Shirts",
@@ -63,10 +63,10 @@
   {
     "id": 27,
     "name": "Baggy T-Shirt - Etnica Para Homen",
-    "price": "1500.00",
+    "price": "1499.00",
     "images": [
-      "https://res.cloudinary.com/dysfwxbhk/image/upload/v1753413120/WhatsApp_Image_2025-07-24_at_7.54.03_PM_4_wlhkbn.jpg",
       "https://res.cloudinary.com/dysfwxbhk/image/upload/v1753413147/WhatsApp_Image_2025-07-24_at_7.54.03_PM_5_hzluzi.jpg",
+      "https://res.cloudinary.com/dysfwxbhk/image/upload/v1753413120/WhatsApp_Image_2025-07-24_at_7.54.03_PM_4_wlhkbn.jpg",
       "https://res.cloudinary.com/dysfwxbhk/image/upload/v1753413083/WhatsApp_Image_2025-07-24_at_7.54.03_PM_2_hydt4c.jpg"
     ],
     "category": "Man",
@@ -84,10 +84,12 @@
   {
     "id": 26,
     "name": "Baggy T-Shirt - Pacific Flower White",
-    "price": "1500.00",
+    "price": "1499.00",
     "images": [
-      "https://res.cloudinary.com/dysfwxbhk/image/upload/v1753413238/WhatsApp_Image_2025-07-24_at_7.54.03_PM_7_cgfgyi.jpg",
-      "https://res.cloudinary.com/dysfwxbhk/image/upload/v1753413239/WhatsApp_Image_2025-07-24_at_7.54.03_PM_6_ryq6xz.jpg"
+      "https://res.cloudinary.com/dysfwxbhk/image/upload/v1753413319/WhatsApp_Image_2025-07-24_at_7.54.04_PM_m6uolp.jpg", 
+      "https://res.cloudinary.com/dysfwxbhk/image/upload/v1753750281/WhatsApp_Image_2025-07-28_at_2.20.13_PM_ipv7ak.jpg",
+      "https://res.cloudinary.com/dysfwxbhk/image/upload/v1753413317/WhatsApp_Image_2025-07-24_at_7.54.04_PM_1_i06vuy.jpg"
+      
     ],
     "category": "Man",
     "subcategory": "Baggy T-Shirts",
@@ -96,17 +98,20 @@
     "isTrending": true,
     "sizes": [
       "S",
-      "M",
       "XL"
     ]
   },
   {
     "id": 24,
     "name": "Baggy T-Shirt - Ethnic Tree White",
-    "price": "1500.00",
+    "price": "1499.00",
     "images": [
-      "https://res.cloudinary.com/dysfwxbhk/image/upload/v1753413317/WhatsApp_Image_2025-07-24_at_7.54.04_PM_1_i06vuy.jpg",
-      "https://res.cloudinary.com/dysfwxbhk/image/upload/v1753413319/WhatsApp_Image_2025-07-24_at_7.54.04_PM_m6uolp.jpg"
+      "https://res.cloudinary.com/dysfwxbhk/image/upload/v1753751713/WhatsApp_Image_2025-07-28_at_6.12.14_PM_y0azuz.jpg",
+      "https://res.cloudinary.com/dysfwxbhk/image/upload/v1753751795/WhatsApp_Image_2025-07-28_at_6.12.14_PM_1_pjctkt.jpg",
+      "https://res.cloudinary.com/dysfwxbhk/image/upload/v1753751817/WhatsApp_Image_2025-07-28_at_6.12.14_PM_2_jeh4t8.jpg",
+      "https://res.cloudinary.com/dysfwxbhk/image/upload/v1753751839/WhatsApp_Image_2025-07-28_at_6.12.14_PM_3_ibzmid.jpg",
+      "https://res.cloudinary.com/dysfwxbhk/image/upload/v1753413238/WhatsApp_Image_2025-07-24_at_7.54.03_PM_7_cgfgyi.jpg"
+
     ],
     "category": "Man",
     "subcategory": "Baggy T-Shirts",
@@ -122,10 +127,11 @@
   {
     "id": 23,
     "name": "Baggy T-Shirt - Ethnic Tree Navy",
-    "price": "1500.00",
+    "price": "1499.00",
     "images": [
+      "https://res.cloudinary.com/dysfwxbhk/image/upload/v1753413396/WhatsApp_Image_2025-07-24_at_7.54.04_PM_3_pvdhzh.jpg",
       "https://res.cloudinary.com/dysfwxbhk/image/upload/v1753413398/WhatsApp_Image_2025-07-24_at_7.54.04_PM_2_zo04d5.jpg",
-      "https://res.cloudinary.com/dysfwxbhk/image/upload/v1753413396/WhatsApp_Image_2025-07-24_at_7.54.04_PM_3_pvdhzh.jpg"
+      "https://res.cloudinary.com/dysfwxbhk/image/upload/v1753751881/WhatsApp_Image_2025-07-28_at_6.12.14_PM_4_byvtca.jpg"
     ],
     "category": "Man",
     "subcategory": "Baggy T-Shirts",
@@ -143,8 +149,8 @@
     "name": "Baggy Jeans - Beige Denim",
     "price": "2199.00",
     "images": [
-      "https://res.cloudinary.com/dysfwxbhk/image/upload/v1753413445/WhatsApp_Image_2025-07-24_at_7.54.04_PM_4_z0i33r.jpg",
-      "https://res.cloudinary.com/dysfwxbhk/image/upload/v1753413440/WhatsApp_Image_2025-07-24_at_7.54.04_PM_5_xrvur0.jpg"
+      "https://res.cloudinary.com/dysfwxbhk/image/upload/v1753413440/WhatsApp_Image_2025-07-24_at_7.54.04_PM_5_xrvur0.jpg",
+      "https://res.cloudinary.com/dysfwxbhk/image/upload/v1753413445/WhatsApp_Image_2025-07-24_at_7.54.04_PM_4_z0i33r.jpg"
     ],
     "category": "Man",
     "subcategory": "Baggy Jeans",
@@ -163,7 +169,8 @@
     "name": "Baggy Jeans - Blue Denim",
     "price": "2199.00",
     "images": [
-      "https://res.cloudinary.com/dysfwxbhk/image/upload/v1753413492/WhatsApp_Image_2025-07-24_at_7.54.04_PM_6_im5t9c.jpg"
+      "https://res.cloudinary.com/dysfwxbhk/image/upload/v1753752320/WhatsApp_Image_2025-07-28_at_2.05.28_PM_1_tz0qtb.jpg",
+      "https://res.cloudinary.com/dysfwxbhk/image/upload/v1753750667/WhatsApp_Image_2025-07-24_at_7.54.04_PM_6_q2rner.jpg"
     ],
     "category": "Man",
     "subcategory": "Baggy Jeans",
@@ -182,9 +189,8 @@
     "name": "Baggy Jeans - Black Denim",
     "price": "2499.00",
     "images": [
-      "https://res.cloudinary.com/dysfwxbhk/image/upload/v1753413531/WhatsApp_Image_2025-07-24_at_7.54.04_PM_9_wwydhh.jpg",
-      "https://res.cloudinary.com/dysfwxbhk/image/upload/v1753413532/WhatsApp_Image_2025-07-24_at_7.54.04_PM_8_zx6haw.jpg",
-      "https://res.cloudinary.com/dysfwxbhk/image/upload/v1753413536/WhatsApp_Image_2025-07-24_at_7.54.04_PM_7_k2eesl.jpg"
+      "https://res.cloudinary.com/dysfwxbhk/image/upload/v1753749314/WhatsApp_Image_2025-07-24_at_7.54.04_PM_8_zx6haw.jpg",
+      "https://res.cloudinary.com/dysfwxbhk/image/upload/v1753749295/WhatsApp_Image_2025-07-24_at_7.54.04_PM_9_wwydhh.jpg"
     ],
     "category": "Man",
     "subcategory": "Baggy Jeans",

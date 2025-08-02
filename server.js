@@ -13,14 +13,23 @@ connectDB();
 const app = express();
 
 // Middleware
+const allowedOrigins = [
+  "https://royce-client.vercel.app",
+  "http://localhost:3000",
+  "https://www.roycethreads.com"
+];
+
 app.use(cors({
-  origin: [
-    "https://royce-client.vercel.app", // replace with your Vercel/GitHub domain
-    "http://localhost:3000",
-    "https://www.roycethreads.com"             // for local dev
-  ],
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error(`Blocked by CORS: ${origin}`));
+    }
+  },
   credentials: true
 }));
+
 
 app.use(express.json());
 
