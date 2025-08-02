@@ -17,9 +17,9 @@ const allowedOrigins = [
   "https://royce-client.vercel.app",
   "http://localhost:3000",
   "https://www.roycethreads.com",
-  "'https://roycethreads.com' "
+  "https://roycethreads.com"
 ];
-
+console.log('Blocked CORS origin:', origin);
 app.use(cors({
   origin: function (origin, callback) {
     if (!origin || allowedOrigins.includes(origin)) {
