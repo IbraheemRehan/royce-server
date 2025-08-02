@@ -22,15 +22,29 @@ const allowedOrigins = [
 
 app.use(cors({
   origin: function (origin, callback) {
-    if (!origin || allowedOrigins.includes(origin)) {
+    const allowedOrigins = [
+      "https://royce-client.vercel.app",
+      "https://www.roycethreads.com",
+      "https://roycethreads.com"
+    ];
+
+    if (!origin) {
+      // Allow requests with no origin (like mobile apps, curl, postman)
+      return callback(null, true);
+    }
+
+    const isAllowed = allowedOrigins.some(o => origin.startsWith(o));
+
+    if (isAllowed) {
       callback(null, true);
     } else {
+      console.log("❌ Blocked by CORS:", origin);
       callback(new Error(`Blocked by CORS: ${origin}`));
     }
   },
-  credentials: true,
-  optionsSuccessStatus: 200 //  fixes Safari and older browsers
+  credentials: true
 }));
+
 
 
 app.use(express.json());
