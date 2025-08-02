@@ -49,7 +49,7 @@ app.use(cors({
   credentials: false // OK if you don't use cookies
 }));
 
-app.options('*', cors()); // handle preflight
+
 
 app.use(express.json());
 app.use('/uploads', express.static('uploads'));
