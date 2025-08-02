@@ -28,27 +28,30 @@ app.use(cors({
       "https://roycethreads.com"
     ];
 
-    //  Allow if no origin (e.g., from Google or Instagram)
-    if (!origin) {
+    // ✅ Allow undefined, null or blank origin (Google, Instagram)
+    if (!origin || origin === "null") {
+      console.log("✔ Allowed: No origin (likely from Google/Instagram)");
       return callback(null, true);
     }
 
-    //  Allow if origin matches any of the allowed domains
+    // ✅ Allow if origin starts with allowed
     const isAllowed = allowedOrigins.some(o => origin.startsWith(o));
-
     if (isAllowed) {
-      callback(null, true);
-    } else {
-      console.log("❌ Blocked by CORS:", origin);
-      callback(new Error(`Blocked by CORS: ${origin}`));
+      return callback(null, true);
     }
+
+    console.log("❌ Blocked by CORS:", origin);
+    callback(new Error(`Blocked by CORS: ${origin}`));
   },
-  credentials: true
+  credentials: true,
+  methods: ["GET", "POST", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"]
 }));
 
 
 app.use(express.json());
 
+app.options('*', cors());  // handles browser preflight requests
 // Serve uploaded files (if local)
 app.use('/uploads', express.static('uploads'));
 
