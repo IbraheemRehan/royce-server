@@ -13,33 +13,26 @@ connectDB();
 const app = express();
 
 // Middleware
+
 const allowedOrigins = [
   "https://royce-client.vercel.app",
-  "http://localhost:3000",
+  "https://roycethreads.com",
   "https://www.roycethreads.com",
-  "https://roycethreads.com"
+  "http://localhost:3000"
 ];
 
 app.use(cors({
   origin: function (origin, callback) {
-    const allowedOrigins = [
-      "https://royce-client.vercel.app",
-      "https://www.roycethreads.com",
-      "https://roycethreads.com"
-    ];
+    if (!origin) return callback(null, true);
 
-    if (!origin) {
-      // Allow requests with no origin (like mobile apps, curl, postman)
-      return callback(null, true);
-    }
-
-    const isAllowed = allowedOrigins.some(o => origin.startsWith(o));
+    const isAllowed = allowedOrigins.some(o => origin.startsWith(o))
+      || origin.includes("vercel.app"); //  allow all Vercel preview links
 
     if (isAllowed) {
       callback(null, true);
     } else {
       console.log("❌ Blocked by CORS:", origin);
-      callback(new Error(`Blocked by CORS: ${origin}`));
+      callback(new Error("Blocked by CORS: " + origin));
     }
   },
   credentials: true
@@ -66,5 +59,4 @@ app.use('/api/cart', require('./routes/cart'));
 
 // Start the server with Railway-compatible PORT
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-
+app.listen(PORT, () => console.log("Server running on port ${PORT}"));
