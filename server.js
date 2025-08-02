@@ -1,3 +1,5 @@
+// ✅ DO NOT put `console.log(req.headers.origin)` here — req is undefined
+
 const express = require('express');
 const cors = require('cors');
 const dotenv = require('dotenv');
@@ -24,15 +26,15 @@ const allowedOrigins = [
 
 app.use(cors({
   origin: function (origin, callback) {
-     console.log("🌐 Incoming request origin:", origin);
+    console.log("🌐 Incoming request origin:", origin);
     if (!origin) return callback(null, true);
 
     if (
       allowedOrigins.includes(origin) ||
       origin.endsWith(".vercel.app") ||
       origin.includes("royce-client") ||
-      origin.includes("instagram.com") ||  // For Instagram in-app
-      origin.includes("google.com")       // For Google webview
+      origin.includes("instagram.com") ||
+      origin.includes("google.com")
     ) {
       callback(null, true);
     } else {
@@ -40,28 +42,25 @@ app.use(cors({
       callback(new Error("Blocked by CORS: " + origin));
     }
   },
-  credentials: false // ⚠️ Set to false if you're not using cookies/sessions
+  credentials: false
 }));
 
 app.use(express.json());
-
-// Serve uploaded files (if local)
 app.use('/uploads', express.static('uploads'));
 
-// ✅ Health check route for Railway
 app.get("/", (req, res) => {
+  console.log("✅ Request to / from origin:", req.headers.origin);
   res.send("Royce Threads API is running");
 });
 
-console.log("Incoming request origin:", req.headers.origin);
-// Main API Routes
+// ✅ DO NOT put `console.log(req.headers.origin)` here
+
+// Routes
 app.use('/api/products', require('./routes/productRoutes'));
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/upload', require('./routes/upload'));
 app.use('/api/orders', require('./routes/order'));
 app.use('/api/cart', require('./routes/cart'));
 
-// Start the server with Railway-compatible PORT
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-
