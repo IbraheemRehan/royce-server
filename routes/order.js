@@ -113,9 +113,10 @@ router.post('/', async (req, res) => {
 
     res.status(201).json(savedOrder);
   } catch (err) {
-    console.error(err.message);
-    res.status(500).json({ error: 'Failed to place order' });
+    console.error("❌ Order placement failed:", err); 
+    res.status(500).json({ error: 'Failed to place order', message: err.message });
   }
+
 });
 
 module.exports = router;
