@@ -16,7 +16,8 @@ const app = express();
 const allowedOrigins = [
   "https://royce-client.vercel.app",
   "http://localhost:3000",
-  "https://www.roycethreads.com"
+  "https://www.roycethreads.com",
+  "'https://roycethreads.com' "
 ];
 
 app.use(cors({
