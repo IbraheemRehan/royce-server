@@ -13,38 +13,31 @@ connectDB();
 const app = express();
 
 // Middleware
+
 const allowedOrigins = [
   "https://royce-client.vercel.app",
-  "http://localhost:3000",
+  "https://roycethreads.com",
   "https://www.roycethreads.com",
-  "https://roycethreads.com"
+  "http://localhost:3000"
 ];
 
 app.use(cors({
   origin: function (origin, callback) {
-    const allowedOrigins = [
-      "https://royce-client.vercel.app",
-      "https://www.roycethreads.com",
-      "https://roycethreads.com"
-    ];
+    if (!origin) return callback(null, true);
 
-    //  Allow if no origin (e.g., from Google or Instagram)
-    if (!origin) {
-      return callback(null, true);
-    }
-
-    // ✅ Allow if origin matches any of the allowed domains
-    const isAllowed = allowedOrigins.some(o => origin.startsWith(o));
+    const isAllowed = allowedOrigins.some(o => origin.startsWith(o))
+      || origin.includes("vercel.app"); //  allow all Vercel preview links
 
     if (isAllowed) {
       callback(null, true);
     } else {
       console.log("❌ Blocked by CORS:", origin);
-      callback(new Error(`Blocked by CORS: ${origin}`));
+      callback(new Error("Blocked by CORS: " + origin));
     }
   },
   credentials: true
 }));
+
 
 
 app.use(express.json());
