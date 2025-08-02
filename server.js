@@ -15,28 +15,23 @@ const app = express();
 // Middleware
 const allowedOrigins = [
   "https://royce-client.vercel.app",
-  "http://localhost:3000",
+  "https://roycethreads.com",
   "https://www.roycethreads.com",
-  "https://roycethreads.com"
+  "http://localhost:3000",
+  "https://l.instagram.com",
+  "https://www.google.com"
 ];
 
 app.use(cors({
   origin: function (origin, callback) {
-    if (!origin) {
-      return callback(null, true); // allow requests like Postman or curl
-    }
-
-    const allowedOrigins = [
-      "https://royce-client.vercel.app",
-      "https://roycethreads.com",
-      "https://www.roycethreads.com",
-      "http://localhost:3000"
-    ];
+    if (!origin) return callback(null, true);
 
     if (
       allowedOrigins.includes(origin) ||
-      origin.endsWith(".vercel.app") || // allow all Vercel previews
-      origin.includes("royce-client")   // fallback for dynamic subdomains
+      origin.endsWith(".vercel.app") ||
+      origin.includes("royce-client") ||
+      origin.includes("instagram.com") ||  // For Instagram in-app
+      origin.includes("google.com")       // For Google webview
     ) {
       callback(null, true);
     } else {
@@ -56,6 +51,8 @@ app.use('/uploads', express.static('uploads'));
 app.get("/", (req, res) => {
   res.send("Royce Threads API is running");
 });
+
+console.log("Incoming request origin:", req.headers.origin);
 
 // Main API Routes
 app.use('/api/products', require('./routes/productRoutes'));
