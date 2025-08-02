@@ -12,29 +12,22 @@ connectDB();
 
 const app = express();
 
-// Middleware
+// ✅ Define allowed origins
 const allowedOrigins = [
   "https://royce-client.vercel.app",
-  "http://localhost:3000",
   "https://www.roycethreads.com",
-  "https://roycethreads.com"
+  "https://roycethreads.com",
+  "http://localhost:3000"
 ];
 
-app.use(cors({
+// ✅ CORS config
+const corsOptions = {
   origin: function (origin, callback) {
-    const allowedOrigins = [
-      "https://royce-client.vercel.app",
-      "https://www.roycethreads.com",
-      "https://roycethreads.com"
-    ];
-
-    // ✅ Allow undefined, null or blank origin (Google, Instagram)
     if (!origin || origin === "null") {
       console.log("✔ Allowed: No origin (likely from Google/Instagram)");
       return callback(null, true);
     }
 
-    // ✅ Allow if origin starts with allowed
     const isAllowed = allowedOrigins.some(o => origin.startsWith(o));
     if (isAllowed) {
       return callback(null, true);
@@ -46,28 +39,32 @@ app.use(cors({
   credentials: true,
   methods: ["GET", "POST", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"]
-}));
+};
 
+// ✅ Apply CORS middleware
+app.use(cors(corsOptions));
 
+// ✅ Handle preflight OPTIONS for all routes
+app.options('*', cors(corsOptions));
+
+// Body parser
 app.use(express.json());
 
-app.options('*', cors());  // handles browser preflight requests
-// Serve uploaded files (if local)
+// Serve uploads (if needed)
 app.use('/uploads', express.static('uploads'));
 
-// ✅ Health check route for Railway
+// Health check
 app.get("/", (req, res) => {
   res.send("Royce Threads API is running");
 });
 
-// Main API Routes
+// API Routes
 app.use('/api/products', require('./routes/productRoutes'));
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/upload', require('./routes/upload'));
 app.use('/api/orders', require('./routes/order'));
 app.use('/api/cart', require('./routes/cart'));
 
-// Start the server with Railway-compatible PORT
+// Start server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-
