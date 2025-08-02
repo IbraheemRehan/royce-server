@@ -19,7 +19,7 @@ const allowedOrigins = [
   "https://www.roycethreads.com",
   "https://roycethreads.com"
 ];
-console.log('Blocked CORS origin:', origin);
+
 app.use(cors({
   origin: function (origin, callback) {
     if (!origin || allowedOrigins.includes(origin)) {
