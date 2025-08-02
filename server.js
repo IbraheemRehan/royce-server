@@ -21,6 +21,8 @@ const allowedOrigins = [
   "https://www.roycethreads.com",
   "http://localhost:3000",
   "https://l.instagram.com",
+  'https://www.instagram.com',
+  'capacitor://localhost', 
   "https://www.google.com"
 ];
 
@@ -42,8 +44,12 @@ app.use(cors({
       callback(new Error("Blocked by CORS: " + origin));
     }
   },
-  credentials: false
+  methods: ['GET', 'POST', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: false // OK if you don't use cookies
 }));
+
+app.options('*', cors()); // handle preflight
 
 app.use(express.json());
 app.use('/uploads', express.static('uploads'));
