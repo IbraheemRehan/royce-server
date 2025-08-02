@@ -3,6 +3,7 @@ const router = express.Router();
 const Order = require('../models/Order');
 const nodemailer = require('nodemailer');
 
+
 const BASE_URL = process.env.BASE_URL || 'https://royce-client.vercel.app';
 
 const transporter = nodemailer.createTransport({
@@ -22,6 +23,9 @@ const isValidEmail = (email) => {
 // @desc    Create new order
 router.post('/', async (req, res) => {
   try {
+    console.log("🧭 Request from:", req.headers['user-agent']);
+    console.log("📦 Order payload:", JSON.stringify(req.body, null, 2));
+
     const {
       customerName,
       email,
@@ -39,7 +43,7 @@ router.post('/', async (req, res) => {
       !customerName ||
       !email ||
       !items || !Array.isArray(items) || items.length === 0 ||
-      !totalPrice ||
+      totalPrice === undefined || isNaN(totalPrice) ||
       !address || !address.shipping || !address.billing ||
       !phone ||
       !paymentMethod
@@ -48,6 +52,8 @@ router.post('/', async (req, res) => {
         error: 'Please fill all required fields: name, email, shipping and billing address, phone, payment method, and at least one item.'
       });
     }
+
+
 
     const newOrder = new Order({
       customerName,
@@ -113,7 +119,7 @@ router.post('/', async (req, res) => {
 
     res.status(201).json(savedOrder);
   } catch (err) {
-    console.error("❌ Order placement failed:", err); 
+    console.error("❌ Order placement failed:", err);
     res.status(500).json({ error: 'Failed to place order', message: err.message });
   }
 
