@@ -13,32 +13,39 @@ connectDB();
 const app = express();
 
 // Middleware
-
 const allowedOrigins = [
   "https://royce-client.vercel.app",
-  "https://roycethreads.com",
+  "http://localhost:3000",
   "https://www.roycethreads.com",
-  "http://localhost:3000"
+  "https://roycethreads.com"
 ];
 
 app.use(cors({
   origin: function (origin, callback) {
-    if (!origin) return callback(null, true);
+    if (!origin) {
+      return callback(null, true); // allow requests like Postman or curl
+    }
 
-    const isAllowed = allowedOrigins.some(o => origin.startsWith(o))
-      || origin.includes("vercel.app"); //  allow all Vercel preview links
+    const allowedOrigins = [
+      "https://royce-client.vercel.app",
+      "https://roycethreads.com",
+      "https://www.roycethreads.com",
+      "http://localhost:3000"
+    ];
 
-    if (isAllowed) {
+    if (
+      allowedOrigins.includes(origin) ||
+      origin.endsWith(".vercel.app") || // allow all Vercel previews
+      origin.includes("royce-client")   // fallback for dynamic subdomains
+    ) {
       callback(null, true);
     } else {
       console.log("❌ Blocked by CORS:", origin);
       callback(new Error("Blocked by CORS: " + origin));
     }
   },
-  credentials: true
+  credentials: false // ⚠️ Set to false if you're not using cookies/sessions
 }));
-
-
 
 app.use(express.json());
 
@@ -59,4 +66,5 @@ app.use('/api/cart', require('./routes/cart'));
 
 // Start the server with Railway-compatible PORT
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log("Server running on port ${PORT}"));
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
