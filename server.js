@@ -28,11 +28,12 @@ app.use(cors({
       "https://roycethreads.com"
     ];
 
+    //  Allow if no origin (e.g., from Google or Instagram)
     if (!origin) {
-      // Allow requests with no origin (like mobile apps, curl, postman)
       return callback(null, true);
     }
 
+    //  Allow if origin matches any of the allowed domains
     const isAllowed = allowedOrigins.some(o => origin.startsWith(o));
 
     if (isAllowed) {
@@ -44,7 +45,6 @@ app.use(cors({
   },
   credentials: true
 }));
-
 
 
 app.use(express.json());
