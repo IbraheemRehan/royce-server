@@ -3,6 +3,17 @@ const router = express.Router();
 const Order = require('../models/Order');
 const nodemailer = require('nodemailer');
 
+router.post("/", async (req, res) => {
+  try {
+    console.log("Received Order Payload:", req.body); // ✅ Add this
+
+    // ... your logic
+  } catch (error) {
+    console.error("Error placing order:", error); // ✅ Add this too
+    res.status(500).json({ error: "Internal server error" });
+  }
+});
+
 const BASE_URL = process.env.BASE_URL || 'https://royce-client.vercel.app';
 
 const transporter = nodemailer.createTransport({
