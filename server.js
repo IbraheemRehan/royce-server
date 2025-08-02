@@ -24,6 +24,7 @@ const allowedOrigins = [
 
 app.use(cors({
   origin: function (origin, callback) {
+     console.log("🌐 Incoming request origin:", origin);
     if (!origin) return callback(null, true);
 
     if (
@@ -53,7 +54,6 @@ app.get("/", (req, res) => {
 });
 
 console.log("Incoming request origin:", req.headers.origin);
-
 // Main API Routes
 app.use('/api/products', require('./routes/productRoutes'));
 app.use('/api/auth', require('./routes/auth'));
