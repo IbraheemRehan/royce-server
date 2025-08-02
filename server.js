@@ -12,59 +12,59 @@ connectDB();
 
 const app = express();
 
-// ✅ Define allowed origins
+// Middleware
 const allowedOrigins = [
   "https://royce-client.vercel.app",
+  "http://localhost:3000",
   "https://www.roycethreads.com",
-  "https://roycethreads.com",
-  "http://localhost:3000"
+  "https://roycethreads.com"
 ];
 
-// ✅ CORS config
-const corsOptions = {
+app.use(cors({
   origin: function (origin, callback) {
-    if (!origin || origin === "null") {
-      console.log("✔ Allowed: No origin (likely from Google/Instagram)");
+    const allowedOrigins = [
+      "https://royce-client.vercel.app",
+      "https://www.roycethreads.com",
+      "https://roycethreads.com"
+    ];
+
+    //  Allow if no origin (e.g., from Google or Instagram)
+    if (!origin) {
       return callback(null, true);
     }
 
+    // ✅ Allow if origin matches any of the allowed domains
     const isAllowed = allowedOrigins.some(o => origin.startsWith(o));
+
     if (isAllowed) {
-      return callback(null, true);
+      callback(null, true);
+    } else {
+      console.log("❌ Blocked by CORS:", origin);
+      callback(new Error(`Blocked by CORS: ${origin}`));
     }
-
-    console.log("❌ Blocked by CORS:", origin);
-    callback(new Error(`Blocked by CORS: ${origin}`));
   },
-  credentials: true,
-  methods: ["GET", "POST", "OPTIONS"],
-  allowedHeaders: ["Content-Type", "Authorization"]
-};
+  credentials: true
+}));
 
-// ✅ Apply CORS middleware
-app.use(cors(corsOptions));
 
-// ✅ Handle preflight OPTIONS for all routes
-app.options('*', cors(corsOptions));
-
-// Body parser
 app.use(express.json());
 
-// Serve uploads (if needed)
+// Serve uploaded files (if local)
 app.use('/uploads', express.static('uploads'));
 
-// Health check
+// ✅ Health check route for Railway
 app.get("/", (req, res) => {
   res.send("Royce Threads API is running");
 });
 
-// API Routes
+// Main API Routes
 app.use('/api/products', require('./routes/productRoutes'));
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/upload', require('./routes/upload'));
 app.use('/api/orders', require('./routes/order'));
 app.use('/api/cart', require('./routes/cart'));
 
-// Start server
+// Start the server with Railway-compatible PORT
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
