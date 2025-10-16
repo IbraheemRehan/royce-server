@@ -5,7 +5,8 @@ const User = require('../models/User');
 
 // Register
 router.post('/register', async (req, res) => {
-  const hashed = await bcrypt.hash(req.body.password, 10);
+  let password = req.body.password;
+  const hashed = await bcrypt.hash(password, 10);
   const user = new User({ ...req.body, password: hashed });
   await user.save();
   res.status(201).json({ message: "Registered" });
