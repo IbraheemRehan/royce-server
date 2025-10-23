@@ -1,7 +1,6 @@
 const Product = require('../models/Product');
 const fs = require('fs');
 const path = require('path');
-const express = require('express');
 
 
 // Add new product
@@ -77,5 +76,3 @@ module.exports = {
   deleteProduct
 };
 
-const allProducts = await Product.find();
-fs.writeFileSync(path.join(__dirname, '../products.json'), JSON.stringify(allProducts, null, 2));
