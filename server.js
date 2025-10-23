@@ -59,7 +59,7 @@ app.get("/", (req, res) => {
   res.send("Royce Threads API is running");
 });
 
-// ✅ DO NOT put `console.log(req.headers.origin)` here
+
 
 // Routes
 app.use('/api/products', require('./routes/productRoutes'));

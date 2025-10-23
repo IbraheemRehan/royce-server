@@ -1,6 +1,8 @@
 const Product = require('../models/Product');
 const fs = require('fs');
 const path = require('path');
+const express = require('express');
+
 
 // Add new product
 const addProduct = async (req, res) => {
