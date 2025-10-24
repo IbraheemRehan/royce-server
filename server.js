@@ -28,26 +28,15 @@ const allowedOrigins = [
 ];
 
 app.use(cors({
-  origin: function (origin, callback) {
-    console.log("🌐 Incoming request origin:", origin);
-    if (!origin) return callback(null, true);
-
-    if (
-      allowedOrigins.includes(origin) ||
-      origin.endsWith(".vercel.app") ||
-      origin.includes("royce-client") ||
-      origin.includes("instagram.com") ||
-      origin.includes("google.com")
-    ) {
-      callback(null, true);
-    } else {
-      console.log("❌ Blocked by CORS:", origin);
-      callback(new Error("Blocked by CORS: " + origin));
-    }
-  },
-  methods: ['GET', 'POST', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
-  credentials: false // OK if you don't use cookies
+  origin: [
+    "https://royce-client.vercel.app",
+    "https://roycethreads.com",
+    "https://www.roycethreads.com",
+    "http://localhost:3000",
+    "https://github.com/IbraheemRehan", 
+  ],
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"],
 }));
 
 
