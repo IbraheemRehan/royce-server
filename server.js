@@ -29,11 +29,11 @@ const allowedOrigins = [
 
 app.use(cors({
   origin: [
+    "http://localhost:5173",   
+    "http://localhost:3000",   
     "https://royce-client.vercel.app",
     "https://roycethreads.com",
     "https://www.roycethreads.com",
-    "http://localhost:3000",
-    "https://github.com/IbraheemRehan", 
   ],
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"],
