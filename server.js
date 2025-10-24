@@ -23,7 +23,8 @@ const allowedOrigins = [
   "https://l.instagram.com",
   'https://www.instagram.com',
   'capacitor://localhost', 
-  "https://www.google.com"
+  "https://www.google.com",
+  "*"
 ];
 
 app.use(cors({
