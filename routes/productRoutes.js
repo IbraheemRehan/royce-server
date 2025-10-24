@@ -5,12 +5,12 @@ const multer = require('multer');
 const {
   addProduct,
   getProducts,
-  getProductById,   // ✅ Add this controller
+  getProductById,   
   updateProduct,
   deleteProduct
 } = require('../controllers/productController');
 
-// ✅ Multer setup
+//  Multer setup
 const storage = multer.diskStorage({
   destination: './uploads/',
   filename: (req, file, cb) => {
