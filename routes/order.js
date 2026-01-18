@@ -7,21 +7,14 @@ const nodemailer = require('nodemailer');
 const BASE_URL = process.env.BASE_URL || 'https://royce-client.vercel.app';
 
 const transporter = nodemailer.createTransport({
-<<<<<<< HEAD
-  service: "gmail",
-=======
-  service: 'gmail',
->>>>>>> 2bf35e67c9951ba4f429c32c12a03e9ab4d270e7
+
   auth: {
     user: process.env.GMAIL_USER,
     pass: process.env.GMAIL_PASS
   }
 });
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 2bf35e67c9951ba4f429c32c12a03e9ab4d270e7
 // Simple email format validator
 const isValidEmail = (email) => {
   const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -122,7 +115,7 @@ router.post('/', async (req, res) => {
         <p><strong>Royce Threads</strong></p>
       `
     };
-<<<<<<< HEAD
+
     const sendEmail = async (options, label) => {
   try {
     const info = await transporter.sendMail(options);
@@ -138,11 +131,10 @@ router.post('/', async (req, res) => {
     await sendEmail(adminMailOptions, "Admin");
     await sendEmail(customerMailOptions, "Customer");
 
-=======
 
     await transporter.sendMail(adminMailOptions);
     await transporter.sendMail(customerMailOptions);
->>>>>>> 2bf35e67c9951ba4f429c32c12a03e9ab4d270e7
+
 
     res.status(201).json(savedOrder);
   } catch (err) {
