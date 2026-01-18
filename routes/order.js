@@ -3,17 +3,17 @@ const router = express.Router();
 const Order = require('../models/Order');
 const nodemailer = require('nodemailer');
 
-
 const BASE_URL = process.env.BASE_URL || 'https://royce-client.vercel.app';
 
+// Nodemailer transporter for Resend
 const transporter = nodemailer.createTransport({
-
+  host: "smtp.resend.email",
+  port: 587,
   auth: {
-    user: process.env.GMAIL_USER,
-    pass: process.env.GMAIL_PASS
+    user: process.env.RESEND_EMAIL, // e.g., onboarding@resend.dev
+    pass: process.env.RESEND_API_KEY // Resend API key
   }
 });
-
 
 // Simple email format validator
 const isValidEmail = (email) => {
@@ -37,9 +37,12 @@ router.post('/', async (req, res) => {
       phone,
       paymentMethod
     } = req.body;
+
+    // Validate email
     if (!isValidEmail(email)) {
       return res.status(400).json({ error: 'Please enter a valid email address.' });
     }
+
     // Validate required fields
     if (
       !customerName ||
@@ -55,8 +58,7 @@ router.post('/', async (req, res) => {
       });
     }
 
-
-
+    // Save order in DB
     const newOrder = new Order({
       customerName,
       email,
@@ -70,19 +72,16 @@ router.post('/', async (req, res) => {
 
     const savedOrder = await newOrder.save();
 
-    // 🔗 Construct product links
+    // Construct product links for email
     const itemsHtml = items.map(item => {
       const link = `${BASE_URL}/ProductDetails.html?productId=${item.productId}`;
-      return `<li>
-    ${item.name} (Size: ${item.size}) x${item.quantity} - Rs.${item.price} <br>
-    <a href="${link}" target="_blank">🔗 View Product</a>
-  </li>`;
+      return `<li>${item.name} (Size: ${item.size}) x${item.quantity} - Rs.${item.price} <br>
+              <a href="${link}" target="_blank">🔗 View Product</a></li>`;
     }).join('');
-
 
     // Email to Admin
     const adminMailOptions = {
-      from: process.env.GMAIL_USER,
+      from: process.env.RESEND_EMAIL,
       to: process.env.ADMIN_EMAIL,
       subject: '📦 New Order Received',
       html: `
@@ -100,7 +99,7 @@ router.post('/', async (req, res) => {
 
     // Email to Customer
     const customerMailOptions = {
-      from: process.env.GMAIL_USER,
+      from: process.env.RESEND_EMAIL,
       to: email,
       subject: '✅ Order Confirmation - Royce Threads',
       html: `
@@ -116,32 +115,25 @@ router.post('/', async (req, res) => {
       `
     };
 
+    // Send emails
     const sendEmail = async (options, label) => {
-  try {
-    const info = await transporter.sendMail(options);
-    console.log(`✅ ${label} email sent:`, info.messageId);
-  } catch (err) {
-    console.error(`❌ ${label} email failed:`, err);
-  }
-};
+      try {
+        const info = await transporter.sendMail(options);
+        console.log(`✅ ${label} email sent:`, info.messageId);
+      } catch (err) {
+        console.error(`❌ ${label} email failed:`, err);
+      }
+    };
 
-
-    await transporter.sendMail(adminMailOptions);
-    await transporter.sendMail(customerMailOptions);
     await sendEmail(adminMailOptions, "Admin");
     await sendEmail(customerMailOptions, "Customer");
 
-
-    await transporter.sendMail(adminMailOptions);
-    await transporter.sendMail(customerMailOptions);
-
-
     res.status(201).json(savedOrder);
+
   } catch (err) {
     console.error("❌ Order placement failed:", err);
     res.status(500).json({ error: 'Failed to place order', message: err.message });
   }
-
 });
 
 module.exports = router;
