@@ -1,4 +1,3 @@
-// ✅ DO NOT put `console.log(req.headers.origin)` here — req is undefined
 
 const express = require('express');
 const cors = require('cors');
@@ -57,6 +56,7 @@ app.use('/api/auth', require('./routes/auth'));
 app.use('/api/upload', require('./routes/upload'));
 app.use('/api/orders', require('./routes/order'));
 app.use('/api/cart', require('./routes/cart'));
+app.use("/api/newsletter", require("./routes/newsletter"));
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
